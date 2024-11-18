@@ -1,0 +1,210 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.813rem;
+  color: black;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 2rem;
+}
+.container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: auto;
+  margin: auto;
+  align-items: center;
+  border-radius: 0.8rem;
+}
+.container .card .main-img {
+  width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+.container .card .text-content {
+  position: relative;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+.container .card .text-content .manrope-heading {
+  padding: 0 1rem;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  color: hsl(217, 19%, 35%);
+}
+.container .card .text-content .manrope-text {
+  padding: 0 1rem;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.813rem;
+  color: hsl(214, 17%, 51%);
+}
+.container .card .text-content .toggle-content {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.container .card .text-content .toggle-content .user {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.container .card .text-content .toggle-content .user .avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+.container .card .text-content .toggle-content .user .user-details .name {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.813rem;
+  color: hsl(217, 19%, 35%);
+}
+.container .card .text-content .toggle-content .user .user-details .date {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.813rem;
+  color: hsl(214, 17%, 51%);
+}
+.container .card .text-content .toggle-content .share-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+.container .card .text-content .toggle-content .share-active .share-text {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  color: white;
+}
+.container .card .text-content .toggle-content .share-active .icons-tray {
+  display: flex;
+  gap: 1rem;
+}
+.container .card .text-content .toggle-content .hidden {
+  display: none;
+}
+.container .card .text-content .share-icon {
+  z-index: 1;
+  margin: 1rem 1rem;
+}
+.container .card .text-content .share-icon .share-btn {
+  background-color: hsl(210, 46%, 95%);
+  height: auto;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.container .card .text-content .share-icon .share-btn:hover {
+  background-color: hsl(212, 23%, 69%);
+  transition: background-color 0.3s ease;
+}
+
+@media (min-width: 48em) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container .card {
+    flex-direction: row;
+    width: 70%;
+  }
+  .container .card .main-img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.8rem;
+    display: block;
+    height: auto;
+  }
+  .container .card .text-content {
+    gap: 1rem;
+    max-width: 47.75rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  .container .card .text-content .manrope-heading {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: hsl(217, 19%, 35%);
+    padding: 0 1rem;
+  }
+  .container .card .text-content .toggle-content {
+    justify-content: space-between;
+  }
+  .container .card .text-content .toggle-content .share-active {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    width: 70%;
+    top: -3rem;
+    left: 20rem;
+  }
+  .container .card .text-content .user {
+    display: flex;
+    gap: 1rem;
+  }
+  .container .card .text-content .user .share-icon .share-btn {
+    background-color: hsl(210, 46%, 95%);
+    height: auto;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .container .card .text-content .user .share-icon .share-btn:hover {
+    background-color: hsl(212, 23%, 69%);
+    transition: background-color 0.3s ease;
+  }
+  .container .card .text-content .user .avatar {
+    width: 10%;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
